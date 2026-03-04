@@ -1,0 +1,50 @@
+:root {
+    --bg: #fdfdf5; /* Off-white like the image */
+    --te-orange: #ff4500;
+    --border: 2px solid #000;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'JetBrains Mono', monospace;
+    display: flex; justify-content: center; padding: 20px;
+}
+
+#app-container { width: 100%; max-width: 400px; text-align: center; }
+
+/* THE LETTER (Matching your screenshot) */
+#letter-card {
+    background: white;
+    border: var(--border);
+    padding: 30px;
+    text-align: left;
+    margin-top: 20px;
+    min-height: 200px;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.05);
+}
+
+#letter-from { text-align: right; margin-top: 40px; font-weight: bold; }
+
+/* TE BUTTONS */
+.btn {
+    border: var(--border);
+    padding: 12px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    background: white;
+}
+
+.primary { background: var(--te-orange); color: white; }
+.secondary { background: #000; color: #fff; }
+
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px;}
+.grid button { border: var(--border); padding: 10px; background: white; font-family: inherit; }
+
+input, textarea {
+    width: 100%;
+    border: var(--border);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: inherit;
+}
