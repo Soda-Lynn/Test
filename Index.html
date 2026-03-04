@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TE-GIFT-CONSOLE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="app-container">
+    <div id="visual-area">
+        <div id="flower-display"></div>
+        <div id="food-box-display"></div>
+    </div>
+
+    <div id="letter-card">
+        <p id="letter-to">Dear Recipient</p>
+        <p id="letter-body">Your message will appear here...</p>
+        <p id="letter-from">Sincerely, Sender</p>
+    </div>
+
+    <div id="editor-controls">
+        <div class="module">
+            <label>1. ADD FOOD</label>
+            <div class="grid">
+                <button onclick="addItem('🍕')">PIZ</button>
+                <button onclick="addItem('🍣')">SSH</button>
+                <button onclick="addItem('🍰')">CKE</button>
+                <button onclick="addItem('🍔')">BRG</button>
+            </div>
+        </div>
+
+        <div class="module">
+            <label>2. WRITE MESSAGE</label>
+            <input type="text" id="input-to" placeholder="DEAR..." oninput="syncLetter()">
+            <textarea id="input-msg" placeholder="MESSAGE..." oninput="syncLetter()"></textarea>
+            <input type="text" id="input-from" placeholder="SINCERELY..." oninput="syncLetter()">
+        </div>
+
+        <div class="footer-btns">
+            <button class="btn secondary" onclick="callGirlfriend()">CALL_GF</button>
+            <button class="btn primary" onclick="generateLink()">GENERATE LINK</button>
+        </div>
+    </div>
+
+    <div id="share-overlay" style="display:none;">
+        <input type="text" id="link-output" readonly>
+        <div class="footer-btns">
+            <button class="btn primary" onclick="copyLink()">COPY LINK</button>
+            <button class="btn" onclick="closeShare()">CLOSE</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
